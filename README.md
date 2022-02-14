@@ -40,7 +40,7 @@ To run the server on Windows, execute:
 Setting the FLASK_ENV variable to development will detect file changes and restart the server automatically.
 Setting the FLASK_APP variable to flaskr directs flask to use the flaskr directory and the __init__.py file to find the application.
 
-## API REFERENCE
+## Api reference
 This app can be run locally or hosted as a base URL. 
 The backend app is hosted at the default, http://localhost:5000; which is set as a proxy in frontend configuration.
 
