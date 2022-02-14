@@ -45,11 +45,11 @@ This app can be run locally or hosted as a base URL.
 The backend app is hosted at the default, http://localhost:5000; which is set as a proxy in frontend configuration.
 
 ## Error Handling
-Errors are retourned as JSON objects in the following format: { "success":False "error": 404 "message":"Not found" }       
+Errors are retourned as JSON objects in the following format: { "success": False, "error": 404, "message": "Not found" }       
 The API will return xxxx error types when requests fail: 
-. 400: Bad request 
-. 500: Internal server error 
-. 422: Unprocessable 
-. 404: Not found
+- 400: Bad request 
+- 500: Internal server error 
+- 422: Unprocessable 
+- 404: Not found
 
 ## Endpoints
