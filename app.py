@@ -116,10 +116,6 @@ def book(id):
     book = Livre.query.get(id)
     if book is None:
         abort(404)
-        """return jsonify({
-            'success': False,
-            'selected_id': None
-        })"""
     else:
         return jsonify({
             'success': True,
@@ -149,10 +145,6 @@ def category(id):
     category = Categorie.query.get(id)
     if category is None:
         abort(404)
-        """return jsonify({
-            'success': False,
-            'selected_id': None
-        })"""
     else:
         return jsonify({
             'success': True,
@@ -253,3 +245,25 @@ def edit_category(id):
         'success': True,
         'category': category.format()
     }))
+
+
+########################################################
+#         This section is set to handle different errors while sending requests              #
+########################################################
+
+@app.errorhandler(404)
+def client(error):
+    return jsonify({
+        'success': False,
+        'error': 404,
+        'message': 'Not found'
+    }), 404
+
+
+@app.errorhandler(500)
+def server(error):
+    return jsonify({
+        'success': False,
+        'error': 500,
+        'message': 'Internal Server Error'
+    }), 500
