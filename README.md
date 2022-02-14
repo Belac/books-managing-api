@@ -18,25 +18,25 @@ We recommend working within a virtual environment whenever using Python for proj
 
 #### Pip dependencies
 Once you have your virtual environment setup and running, install dependencies by running :
-  pip install -r requirements.txt 
+```pip install -r requirements.txt
   or 
-  pip3 install -r requirements.txt
+  pip3 install -r requirements.txt```
 
 ### Database Setup
 With Postgres running, restore a database using the books_managing.sql file provided.     
 From the backend folder in terminal run:
-  psql books_managing < books_managing.sql
+  ```psql books_managing < books_managing.sql```
 
 ### Running the server
 Ensure you are working using your created virtual environment.
 To run the server on Linux or Mac, execute:
-  export FLASK_APP=app.py
+```export FLASK_APP=app.py
   export FLASK_ENV=development
-  flask run
+  flask run```
 To run the server on Windows, execute:
-  set FLASK_APP=app.py
+```set FLASK_APP=app.py
   set FLASK_ENV=development
-  flask run
+  flask run```
 Setting the FLASK_ENV variable to development will detect file changes and restart the server automatically.
 Setting the FLASK_APP variable to flaskr directs flask to use the flaskr directory and the __init__.py file to find the application.
 
