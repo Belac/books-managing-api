@@ -16,7 +16,7 @@ load_dotenv()
 app = Flask(__name__)
 pwd = quote_plus(os.getenv('password'))
 host = os.getenv('hostname')
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://postgres:{pwd}@{host}:5432/books_managing"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://vjbytfuhfjmhbb:4627d3076d96f473c128118726125be588c950e884503c64be7210f0841e216b@ec2-3-219-204-29.compute-1.amazonaws.com:5432/dfpli52jk85a56"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)
