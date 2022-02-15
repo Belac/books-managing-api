@@ -101,7 +101,7 @@ def format(items):
 # Endpoint of base
 @app.route('/')
 def index():
-    return jsnoify({
+    return jsonify({
         "message": "GBEMOU Azuivi",
         "reason": "That's a simple reply to your actions! Me, I have been able to deploy my app!"
     })
