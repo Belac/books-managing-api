@@ -99,6 +99,7 @@ def format(items):
 ########################################################
 
 # Endpoint of base
+@app.route('/')
 def index():
     return jsnoify({
         "message": "GBEMOU Azuivi",
