@@ -212,19 +212,18 @@ def edit_book(id):
     ]
     for info in body:
         if info in editable_columns:
-            match info:
-                case 'isbn':
-                    book.isbn = body['isbn']
-                case 'titre':
-                    book.titre = body['titre']
-                case 'auteur':
-                    book.auteur = body['auteur']
-                case 'editeur':
-                    book.editeur = body['editeur']
-                case 'id_categorie':
-                    book.id_categorie = body['id_categorie']
-                case 'date_publication':
-                    book.date_publication = body['date_publication']
+            if info == 'isbn':
+                book.isbn = body['isbn']
+            if info == 'titre':
+                book.titre = body['titre']
+            if info == 'auteur':
+                book.auteur = body['auteur']
+            if info == 'editeur':
+                book.editeur = body['editeur']
+            if info == 'id_categorie':
+                book.id_categorie = body['id_categorie']
+            if info == 'date_publication':
+                book.date_publication = body['date_publication']
     book.update()
     return jsonify({
         'success': True,
