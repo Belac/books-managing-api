@@ -208,52 +208,58 @@ def delete_category(id):
 # Endpoint 'Edit a book'
 @app.route('/livres/<int:id>', methods=['PATCH'])
 def edit_book(id):
-    body = request.get_json()
     book = Livre.query.get(id)
-    editable_columns = [
-        'isbn',
-        'titre',
-        'date_publication',
-        'auteur',
-        'editeur',
-        'id_categorie'
-    ]
-    for info in body:
-        match info:
-            case 'isbn':
-                book.isbn = body['isbn']
-            case 'titre':
-                book.titre = body['titre']
-            case 'auteur':
-                book.auteur = body['auteur']
-            case 'editeur':
-                book.editeur = body['editeur']
-            case 'id_categorie':
-                book.id_categorie = body['id_categorie']
-            case 'date_publication':
-                book.date_publication = body['date_publication']
-            case _:
-                continue
-    book.update()
-    return jsonify({
-        'success': True,
-        'info_edited': [info for info in body if info in editable_columns],
-        'book': book.format()
-    })
+    if book is None:
+        abort(404)
+    else:
+        body = request.get_json()
+        editable_columns = [
+            'isbn',
+            'titre',
+            'date_publication',
+            'auteur',
+            'editeur',
+            'id_categorie'
+        ]
+        for info in body:
+            match info:
+                case 'isbn':
+                    book.isbn = body['isbn']
+                case 'titre':
+                    book.titre = body['titre']
+                case 'auteur':
+                    book.auteur = body['auteur']
+                case 'editeur':
+                    book.editeur = body['editeur']
+                case 'id_categorie':
+                    book.id_categorie = body['id_categorie']
+                case 'date_publication':
+                    book.date_publication = body['date_publication']
+                case _:
+                    continue
+        book.update()
+        return jsonify({
+            'success': True,
+            'info_edited': [info for info in body if info in editable_columns],
+            'book': book.format()
+        })
 
 
 # Endpoint 'Edit the libel of a category'
 @app.route('/categories/<int:id>', methods=['PATCH'])
 def edit_category(id):
-    body = request.get_json()
     category = Categorie.query.get(id)
-    if 'libelle' in body:
-        category.libelle = body['libelle']
-    category.update()
-    return jsonify(({
-        'success': True,
-        'category': category.format()
-    }))
+    if category is None:
+        abort(404)
+    else:
+        body = request.get_json()
+        if 'libelle' in body:
+            category.libelle = body['libelle']
+        category.update()
+        return jsonify(({
+            'success': True,
+            'category': category.format()
+        }))
 
 
 ########################################################
