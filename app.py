@@ -103,7 +103,8 @@ def index():
     return jsnoify({
         "message": "GBEMOU Azuivi",
         "reason": "That's a simple reply to your actions! Me, I have been able to deploy my app!"
-    }
+    })
+
 # Endpoint 'List of all the books'
 @app.route('/livres')
 def all_books():
