@@ -98,6 +98,12 @@ def format(items):
 #         This section is set to add the different endpoints of our application               #
 ########################################################
 
+# Endpoint of base
+def index():
+    return jsnoify({
+        "message": "GBEMOU Azuivi",
+        "reason": "That's a simple reply to your actions! Me, I have been able to deploy my app!"
+    }
 # Endpoint 'List of all the books'
 @app.route('/livres')
 def all_books():
@@ -210,20 +216,22 @@ def edit_book(id):
         'editeur',
         'id_categorie'
     ]
-    for info in body:
-        if info in editable_columns:
-            if info == 'isbn':
+        for info in body:
+        match info:
+            case 'isbn':
                 book.isbn = body['isbn']
-            if info == 'titre':
+            case 'titre':
                 book.titre = body['titre']
-            if info == 'auteur':
+            case 'auteur':
                 book.auteur = body['auteur']
-            if info == 'editeur':
+            case 'editeur':
                 book.editeur = body['editeur']
-            if info == 'id_categorie':
+            case 'id_categorie':
                 book.id_categorie = body['id_categorie']
-            if info == 'date_publication':
+            case 'date_publication':
                 book.date_publication = body['date_publication']
+            case _:
+                continue
     book.update()
     return jsonify({
         'success': True,
