@@ -102,8 +102,8 @@ def format(items):
 @app.route('/')
 def index():
     return jsonify({
-        "message": "GBEMOU Azuivi",
-        "reason": "That's a simple reply to your actions! Me, I have been able to deploy my app!"
+        "message": "The more that you read, the more things you will know.",
+        "ps": "If you don't like to read, you haven't found the right book"
     })
 
 # Endpoint 'List of all the books'
