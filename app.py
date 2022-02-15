@@ -217,7 +217,7 @@ def edit_book(id):
         'editeur',
         'id_categorie'
     ]
-        for info in body:
+    for info in body:
         match info:
             case 'isbn':
                 book.isbn = body['isbn']
