@@ -18,17 +18,18 @@ We recommend working within a virtual environment whenever using Python for proj
 
 #### Pip dependencies
 Once you have your virtual environment setup and running, install dependencies by running :
-```pip install -r requirements.txt
-  or 
-  pip3 install -r requirements.txt
+````
+pip install -r requirements.txt
+or 
+pip3 install -r requirements.txt
 ````
 
 ### Database Setup
 With Postgres running, restore a database using the books_managing.sql file provided.     
 From the backend folder in terminal run:
-```
+````
 psql books_managing < books_managing.sql
-```
+````
 
 ### Running the server
 Ensure you are working using your created virtual environment.
@@ -497,7 +498,7 @@ The API will return different error types when requests fail:
         Results are paginated in groups of 25. include a request argument to choose page number, starting from 1.
 
         SAMPLE: curl -X DELETE http://localhost:5000/categories/25
-```
+````
         {
         'success': True,
         'delete successfully': 25,
@@ -604,16 +605,18 @@ The API will return different error types when requests fail:
     "success": true,
     "total_categories": 24
 }
-```
+````
 . ##PATCH/livres/id
   GENERAL:
   This endpoint is used to update a primary_color of plant
   We return a livre(book) which we update
 
   SAMPLE.....For Patch
-  ``` curl -X PATCH http://localhost:5000/livres/42-H "Content-Type:application/json" -d "{"titre": "Peter punk au pays des merveilles"}"
-  ```
-  ```
+  ````
+  curl -X PATCH http://localhost:5000/livres/42-H "Content-Type:application/json" -d "{"titre": "Peter punk au pays des merveilles"}"
+  ````
+  
+  ````
    {
     "auteur": "Danü Danquigny",
     "categorie_id": 21,
@@ -643,7 +646,7 @@ The API will return different error types when requests fail:
     SAMPLE.....For create
 
     curl -X POST http://localhost:5000/categories -H "Content-Type:application/json" -d "{"id": 24,"libelle_categorie": "Ma beauté legendaire"}"
-```
+````
     {
     "Categorie": [
         {
@@ -746,4 +749,4 @@ The API will return different error types when requests fail:
     "success": true,
     "total_categories": 24
 }
-``` 
+````
