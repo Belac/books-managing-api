@@ -20,7 +20,9 @@ We recommend working within a virtual environment whenever using Python for proj
 Once you have your virtual environment setup and running, install dependencies by running :
 ````
 pip install -r requirements.txt
+````
 or 
+````
 pip3 install -r requirements.txt
 ````
 
