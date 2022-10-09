@@ -1,5 +1,5 @@
 # books-managing-api
-API for managing books of a library, created with Flask
+API for managing books of a library, created with Flask, and could be tested from [here](https://books-managing-api.herokuapp.com/)
 
 ## Getting started
 
