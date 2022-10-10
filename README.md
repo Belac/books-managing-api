@@ -515,39 +515,41 @@ The API will return different error types when requests fail:
 . ## DELETE/livres        
 
     GENERAL: Delete the Livre of the given ID if it exists. Return the Livre object deleted, success value and the total of Livre that remains.             
-    SAMPLE: curl -X DELETE http://localhost:5000/livres/13
-        {
-            "book": {
-                "auteur": "Clémence Maumené",
-                "date_publication": "Sun, 12 Sep 2021 00:00:00 GMT",
-                "editeur": "Albin Michel",
-                "id": 13,
-                "id_categorie": 3,
-                "isbn": "978-2-2264-5998-5",
-                "titre": "Cuisinez pour bébé"
-            },
-            "deleted_id": 13,
-            "success": true,
-            "total_books": 47
-        }
+    SAMPLE: curl -X DELETE http://localhost:5000/livres/13                   
+    
+          {
+              "book": {
+                  "auteur": "Clémence Maumené",
+                  "date_publication": "Sun, 12 Sep 2021 00:00:00 GMT",
+                  "editeur": "Albin Michel",
+                  "id": 13,
+                  "id_categorie": 3,
+                  "isbn": "978-2-2264-5998-5",
+                  "titre": "Cuisinez pour bébé"
+              },
+              "deleted_id": 13,
+              "success": true,
+              "total_books": 47
+          }
 
 . ##PATCH/livres/id
 
-  GENERAL: This endpoint is used to update a certain property of Livre. Then, We return a Livre which we update and show the property modified.                  
-  SAMPLE: curl -X PATCH http://localhost:5000/livres/12-H "Content-Type:application/json" -d "{"editeur": "Marabout"}"            
-      {
-          "book": {
-              "auteur": "Thibault Geoffray",
-              "date_publication": "Wed, 12 Sep 2018 00:00:00 GMT",
-              "editeur": "Marabout",
-              "id": 12,
-              "id_categorie": 3,
-              "isbn": "978-2-5011-3634-1",
-              "titre": "Mes recettes healthy: BIM ! Prends toi en main avec mes recettes fitfightforever"
-          },
-          "info_edited": [
-              "editeur"
-          ],
-          "success": true
-      }
+  GENERAL: This endpoint is used to update a certain property of Livre. Then, We return a Livre which we update and show the property modified.               
+  SAMPLE: curl -X PATCH http://localhost:5000/livres/12-H "Content-Type:application/json" -d "{"editeur": "Marabout"}"                        
+  
+        {
+            "book": {
+                "auteur": "Thibault Geoffray",
+                "date_publication": "Wed, 12 Sep 2018 00:00:00 GMT",
+                "editeur": "Marabout",
+                "id": 12,
+                "id_categorie": 3,
+                "isbn": "978-2-5011-3634-1",
+                "titre": "Mes recettes healthy: BIM ! Prends toi en main avec mes recettes fitfightforever"
+            },
+            "info_edited": [
+                "editeur"
+            ],
+            "success": true
+        }
    
