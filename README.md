@@ -62,7 +62,7 @@ The API will return different error types when requests fail:
 - 422: Unprocessable 
 - 404: Not found
 
-## Endpoints
+## Some endpoints of our API
 . ## GET/livres
 
   GENERAL:  This endpoints returns a list of Livre object, success value, total number of Livre.              
@@ -514,8 +514,7 @@ The API will return different error types when requests fail:
 
 . ## DELETE/livres        
 
-    GENERAL:
-        Delete the Livre of the given ID if it exists. Return the Livre object deleted, success value and the total of Livre that remains.
+    GENERAL: Delete the Livre of the given ID if it exists. Return the Livre object deleted, success value and the total of Livre that remains.             
     SAMPLE: curl -X DELETE http://localhost:5000/livres/13
         {
             "book": {
@@ -533,145 +532,22 @@ The API will return different error types when requests fail:
         }
 
 . ##PATCH/livres/id
-  GENERAL:
-  This endpoint is used to update a primary_color of plant
-  We return a livre(book) which we update
 
-  SAMPLE.....For Patch
-  
-  curl -X PATCH http://localhost:5000/livres/42-H "Content-Type:application/json" -d "{"titre": "Peter punk au pays des merveilles"}"
-  
-  
-   {
-    "auteur": "Danü Danquigny",
-    "categorie_id": 21,
-    "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT",
-    "editeur": "Gallimard ",
-    "id": 42,
-    "isbn": "978-2-7491-7253-8",
-    "titre": "Peter punk au pays des merveilles"
-   }
+  GENERAL: This endpoint is used to update a certain property of Livre. Then, We return a Livre which we update and show the property modified.                  
+  SAMPLE: curl -X PATCH http://localhost:5000/livres/12-H "Content-Type:application/json" -d "{"editeur": "Marabout"}"            
+      {
+          "book": {
+              "auteur": "Thibault Geoffray",
+              "date_publication": "Wed, 12 Sep 2018 00:00:00 GMT",
+              "editeur": "Marabout",
+              "id": 12,
+              "id_categorie": 3,
+              "isbn": "978-2-5011-3634-1",
+              "titre": "Mes recettes healthy: BIM ! Prends toi en main avec mes recettes fitfightforever"
+          },
+          "info_edited": [
+              "editeur"
+          ],
+          "success": true
+      }
    
-
-. ## POST/categories
-
-    GENERAL:    
-    This endpoint is used to create a new plant or to search for a plant in relation to the terms contained in the livres(books).
-    When the searchTerm parameter is passed from the json, the endpoint performs the search. Otherwise, it is the creation of a new question.
-    In the case of the creation of a new question:
-    We return the ID of the new plant created, the plant that was created, the list of plant and the number of livres(books).
-
-    SAMPLE.....For Search:
-    
-    curl -X POST http://localhost:5000/categories -H "Content-Type:application/json" -d "{"search":"title"}"
-    
-
-                
-
-    SAMPLE.....For create
-
-    curl -X POST http://localhost:5000/categories -H "Content-Type:application/json" -d "{"id": 24,"libelle_categorie": "Ma beauté legendaire"}"
-
-    {
-    "Categorie": [
-        {
-            "id": 1,
-            "libelle_categorie": "Art et cinema"
-        },
-        {
-            "id": 2,
-            "libelle_categorie": "Developpement personnel"
-        },
-        {
-            "id": 3,
-            "libelle_categorie": "Essais et document"
-        },
-        {
-            "id": 4,
-            "libelle_categorie": "Humour"
-        },
-        {
-            "id": 6,
-            "libelle_categorie": "Religion et spiritualité"
-        },
-        {
-            "id": 7,
-            "libelle_categorie": "Scolaire"
-        },
-        {
-            "id": 8,
-            "libelle_categorie": "Théatre"
-        },
-        {
-            "id": 9,
-            "libelle_categorie": "Bandes dessinées"
-        },
-        {
-            "id": 10,
-            "libelle_categorie": "Dictionnaire & Langues"
-        },
-        {
-            "id": 11,
-            "libelle_categorie": "Guide Pratiques"
-        },
-        {
-            "id": 12,
-            "libelle_categorie": "Informatique et Internet"
-        },
-        {
-            "id": 13,
-            "libelle_categorie": "Literrature sentimentale"
-        },
-        {
-            "id": 14,
-            "libelle_categorie": "Science sociales"
-        },
-        {
-            "id": 15,
-            "libelle_categorie": "SF,Fantasy"
-        },
-        {
-            "id": 16,
-            "libelle_categorie": "Tourisme et Voyages"
-        },
-        {
-            "id": 17,
-            "libelle_categorie": "Cuisine"
-        },
-        {
-            "id": 18,
-            "libelle_categorie": "Droit & Economie"
-        },
-        {
-            "id": 19,
-            "libelle_categorie": "Histoire"
-        },
-        {
-            "id": 20,
-            "libelle_categorie": "Jeunesse"
-        },
-        {
-            "id": 21,
-            "libelle_categorie": "Policier,suspense,thrillers"
-        },
-        {
-            "id": 22,
-            "libelle_categorie": "Sciences,techniques & médecine"
-        },
-        {
-            "id": 23,
-            "libelle_categorie": "Sport loisirs et vie pratique"
-        },
-        {
-            "id": 5,
-            "libelle_categorie": "Littérature"
-        },
-        {
-            "id": 24,
-            "libelle_categorie": "Ma beauté legendaire"
-        }
-    ],
-    "success": true,
-    "total_categories": 24
-}
-
