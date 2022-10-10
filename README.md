@@ -514,8 +514,8 @@ The API will return different error types when requests fail:
 
 . ## DELETE/livres        
 
-    GENERAL: Delete the Livre of the given ID if it exists. Return the Livre object deleted, success value and the total of Livre that remains.             
-    SAMPLE: curl -X DELETE http://localhost:5000/livres/13                   
+    GENERAL: Delete the Livre of the given ID if it exists. Return the Livre object deleted, success value and the total of Livre that remains.          
+    SAMPLE: curl -X DELETE http://localhost:5000/livres/13              
     
           {
               "book": {
