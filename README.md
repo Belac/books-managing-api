@@ -506,7 +506,7 @@ The API will return different error types when requests fail:
             ],
             "success": true,
             "total_books": 48
-  }
+        }
   
       
   
