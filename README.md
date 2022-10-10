@@ -70,9 +70,9 @@ The API will return different error types when requests fail:
     
         
     SAMPLE: curl http://localhost:5000/livres
-
+    
         {
-    "": [
+    "book": [
         {
             "auteur": "Jacques Pessis, Claude Lemesle",
             "categorie_id": 1,
@@ -499,8 +499,8 @@ The API will return different error types when requests fail:
 
         Results are paginated in groups of 25. include a request argument to choose page number, starting from 1.
 
-        SAMPLE: curl -X DELETE http://localhost:5000/categories/25
-````
+    SAMPLE: curl -X DELETE http://localhost:5000/categories/25
+
         {
         'success': True,
         'delete successfully': 25,
@@ -607,18 +607,17 @@ The API will return different error types when requests fail:
     "success": true,
     "total_categories": 24
 }
-````
+
 . ##PATCH/livres/id
   GENERAL:
   This endpoint is used to update a primary_color of plant
   We return a livre(book) which we update
 
   SAMPLE.....For Patch
-  ````
-  curl -X PATCH http://localhost:5000/livres/42-H "Content-Type:application/json" -d "{"titre": "Peter punk au pays des merveilles"}"
-  ````
   
-  ````
+  curl -X PATCH http://localhost:5000/livres/42-H "Content-Type:application/json" -d "{"titre": "Peter punk au pays des merveilles"}"
+  
+  
    {
     "auteur": "Danü Danquigny",
     "categorie_id": 21,
@@ -628,7 +627,7 @@ The API will return different error types when requests fail:
     "isbn": "978-2-7491-7253-8",
     "titre": "Peter punk au pays des merveilles"
    }
-    ```
+   
 
 . ## POST/categories
 
@@ -639,16 +638,16 @@ The API will return different error types when requests fail:
     We return the ID of the new plant created, the plant that was created, the list of plant and the number of livres(books).
 
     SAMPLE.....For Search:
-    ```
+    
     curl -X POST http://localhost:5000/categories -H "Content-Type:application/json" -d "{"search":"title"}"
-    ```
+    
 
                 
 
     SAMPLE.....For create
 
     curl -X POST http://localhost:5000/categories -H "Content-Type:application/json" -d "{"id": 24,"libelle_categorie": "Ma beauté legendaire"}"
-````
+
     {
     "Categorie": [
         {
@@ -751,4 +750,4 @@ The API will return different error types when requests fail:
     "success": true,
     "total_categories": 24
 }
-````
+
