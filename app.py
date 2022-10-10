@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from urllib.parse import quote_plus
 from flask_cors import CORS, cross_origin
 import os
+
 # from dotenv import load_dotenv
 
 ########################################################
@@ -14,9 +15,14 @@ import os
 
 # Initial configurations
 app = Flask(__name__)
-# pwd = quote_plus(os.getenv('password'))
-# host = os.getenv('hostname')
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://vjbytfuhfjmhbb:4627d3076d96f473c128118726125be588c950e884503c64be7210f0841e216b@ec2-3-219-204-29.compute-1.amazonaws.com:5432/dfpli52jk85a56"
+
+username = os.getenv('user')
+password = quote_plus(os.getenv('password'))
+host = os.getenv('host')
+port = os.getenv('port')
+db_name = os.getenv('db_name')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{username}:{password}@{host}:{port}/{db_name}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)
@@ -105,6 +111,7 @@ def index():
         "message": "The more that you read, the more things you will know.",
         "ps": "If you don't like to read, you haven't found the right book"
     })
+
 
 # Endpoint 'List of all the books'
 @app.route('/livres')
@@ -196,13 +203,17 @@ def delete_category(id):
     if category is None:
         abort(404)
     else:
-        category.delete()
-        return jsonify({
-            'success': True,
-            'deleted_id': id,
-            'category': category.format(),
-            'total_categories': Categorie.query.count()
-        })
+        books = Livre.query.filter(Livre.id_categorie == id).all()
+        if len(books) != 0:
+            abort(405)
+        else:
+            category.delete()
+            return jsonify({
+                'success': True,
+                'deleted_id': id,
+                'category': category.format(),
+                'total_categories': Categorie.query.count()
+            })
 
 
 # Endpoint 'Edit a book'
@@ -273,6 +284,15 @@ def client(error):
         'error': 404,
         'message': 'Not found'
     }), 404
+
+
+@app.errorhandler(405)
+def method(error):
+    return jsonify(({
+        'success': False,
+        'error': 405,
+        'message': 'Not allowed'
+    })), 405
 
 
 @app.errorhandler(500)
