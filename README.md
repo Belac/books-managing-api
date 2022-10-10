@@ -65,11 +65,8 @@ The API will return different error types when requests fail:
 ## Endpoints
 . ## GET/livres
 
-    GENERAL:
-        This endpoints returns a list of livres object, success value, total number of the livres. 
-    
-        
-    SAMPLE: curl http://localhost:5000/livres
+  GENERAL:  This endpoints returns a list of Livre object, success value, total number of Livre. 
+  SAMPLE: curl http://localhost:5000/livres
     
         {
     "book": [
