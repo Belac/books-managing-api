@@ -69,443 +69,446 @@ The API will return different error types when requests fail:
   SAMPLE: curl http://localhost:5000/livres
     
         {
-  "book": [
-    {
-      "auteur": "Michelle Marly", 
-      "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT", 
-      "editeur": "Fleuves \u00e9ditions", 
-      "id": 1, 
-      "id_categorie": 1, 
-      "isbn": "978-2-2651-5546-6", 
-      "titre": "Romy et les lumi\u00e8res de Paris"
-    }, 
-    {
-      "auteur": "Jens Muller", 
-      "date_publication": "Mon, 01 Oct 2018 00:00:00 GMT", 
-      "editeur": "Taschen", 
-      "id": 2, 
-      "id_categorie": 1, 
-      "isbn": "978-3-8365-7037-4", 
-      "titre": "The history of graphic design : Volume 2, 1960-today"
-    }, 
-    {
-      "auteur": "Walter Isaacson", 
-      "date_publication": "Tue, 19 Mar 2019 00:00:00 GMT", 
-      "editeur": "Quanto", 
-      "id": 3, 
-      "id_categorie": 1, 
-      "isbn": "978-2-8891-5263-6", 
-      "titre": "L\u00e9onard de Vinci"
-    }, 
-    {
-      "auteur": "M\u00e9lanie Renaud", 
-      "date_publication": "Tue, 10 Sep 2019 00:00:00 GMT", 
-      "editeur": "First", 
-      "id": 4, 
-      "id_categorie": 1, 
-      "isbn": "978-2-4120-5977-7", 
-      "titre": "Le piano en 15 minutes par jour pour les Nuls m\u00e9gapoche"
-    }, 
-    {
-      "auteur": "Christophe Blain, Jean-Marc Jancovici", 
-      "date_publication": "Tue, 12 Oct 2021 00:00:00 GMT", 
-      "editeur": "Dargaud", 
-      "id": 5, 
-      "id_categorie": 2, 
-      "isbn": "978-2-2050-8816-8", 
-      "titre": "Le monde sans fin"
-    }, 
-    {
-      "auteur": "Kohei Horikoshi", 
-      "date_publication": "Wed, 27 Jan 2021 00:00:00 GMT", 
-      "editeur": "Ki-oon", 
-      "id": 6, 
-      "id_categorie": 2, 
-      "isbn": "979-1-0327-1081-4", 
-      "titre": "My Hero Academia T31"
-    }, 
-    {
-      "auteur": "Xavier Dorison", 
-      "date_publication": "Sat, 23 Oct 2021 00:00:00 GMT", 
-      "editeur": "Kana", 
-      "id": 7, 
-      "id_categorie": 2, 
-      "isbn": "978-2-5050-7846-3", 
-      "titre": "BD Goldorak"
-    }, 
-    {
-      "auteur": "Masashi Kishimoto", 
-      "date_publication": "Thu, 13 Mar 2003 00:00:00 GMT", 
-      "editeur": "Kana", 
-      "id": 8, 
-      "id_categorie": 2, 
-      "isbn": "978-2-8712-9511-2", 
-      "titre": "Naruto, tome 6"
-    }, 
-    {
-      "auteur": "Philippe Etchebest", 
-      "date_publication": "Tue, 12 Oct 2021 00:00:00 GMT", 
-      "editeur": "Albin Michel", 
-      "id": 9, 
-      "id_categorie": 3, 
-      "isbn": "978-2-2264-6454-5", 
-      "titre": "Cuisinez bien accompagn\u00e9 avec ma m\u00e9thode Mentor: M\u00e9thode & recettes"
-    }, 
-    {
-      "auteur": "Marie-Elodie Pape", 
-      "date_publication": "Wed, 04 Mar 2020 00:00:00 GMT", 
-      "editeur": "Dessain et Tolra", 
-      "id": 10, 
-      "id_categorie": 3, 
-      "isbn": "978-2-0359-7025-1", 
-      "titre": "Yaourts, desserts & cie \u00e0 la yaourti\u00e8re: Sp\u00e9cial multi d\u00e9lices"
-    }, 
-    {
-      "auteur": "B\u00e9reng\u00e8re Philippon", 
-      "date_publication": "Tue, 02 Feb 2021 00:00:00 GMT", 
-      "editeur": "Larousse", 
-      "id": 11, 
-      "id_categorie": 3, 
-      "isbn": "978-2-0359-9718-0", 
-      "titre": "Je r\u00e9ussis ma d\u00e9tox sucre: Comprenez et cuisinez IG bas au quotidien"
-    }, 
-    {
-      "auteur": "Thibault Geoffray", 
-      "date_publication": "Wed, 12 Sep 2018 00:00:00 GMT", 
-      "editeur": "Marabout", 
-      "id": 12, 
-      "id_categorie": 3, 
-      "isbn": "978-2-5011-3634-1", 
-      "titre": "Mes recettes healthy: BIM ! Prends toi en main avec mes recettes fitfightforever"
-    }, 
-    {
-      "auteur": "Cl\u00e9mence Maumen\u00e9", 
-      "date_publication": "Sun, 12 Sep 2021 00:00:00 GMT", 
-      "editeur": "Albin Michel", 
-      "id": 13, 
-      "id_categorie": 3, 
-      "isbn": "978-2-2264-5998-5", 
-      "titre": "Cuisinez pour b\u00e9b\u00e9"
-    }, 
-    {
-      "auteur": "Maud Ankaoua", 
-      "date_publication": "Mon, 14 Oct 2019 00:00:00 GMT", 
-      "editeur": "J'ai lu", 
-      "id": 14, 
-      "id_categorie": 4, 
-      "isbn": "ISBN : 978-2-2902-1051-2", 
-      "titre": "Kilom\u00e8tre z\u00e9ro : Le chemin du bonheur"
-    }, 
-    {
-      "auteur": "Charles Brasart", 
-      "date_publication": "Fri, 12 Mar 2021 00:00:00 GMT", 
-      "editeur": " Armand Colin", 
-      "id": 15, 
-      "id_categorie": 5, 
-      "isbn": "978-2-2006-2660-0", 
-      "titre": "L'essentiel de la grammaire anglaise"
-    }, 
-    {
-      "auteur": "Yann-Ga\u00ebl Menais", 
-      "date_publication": "Tue, 12 Oct 2021 00:00:00 GMT", 
-      "editeur": "Gereso", 
-      "id": 16, 
-      "id_categorie": 6, 
-      "isbn": "979-1-0397-0005-4", 
-      "titre": "Perfectionner ses m\u00e9thodes de vente"
-    }, 
-    {
-      "auteur": "Fr\u00e9d\u00e9ric Laloux", 
-      "date_publication": "Wed, 07 Oct 2015 00:00:00 GMT", 
-      "editeur": "Diateino", 
-      "id": 17, 
-      "id_categorie": 6, 
-      "isbn": "978-2-3545-6105-5", 
-      "titre": "Reinventing Organizations: Vers des communaut\u00e9s de travail inspir\u00e9es"
-    }, 
-    {
-      "auteur": "Christophe Bourseiller", 
-      "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT", 
-      "editeur": "Cerf", 
-      "id": 18, 
-      "id_categorie": 7, 
-      "isbn": "978-2-2041-4513-8", 
-      "titre": "Le complotisme, anatomie d'une religion"
-    }, 
-    {
-      "auteur": "Edith Tavignot", 
-      "date_publication": "Tue, 29 Dec 2020 00:00:00 GMT", 
-      "editeur": "Particulier", 
-      "id": 19, 
-      "id_categorie": 8, 
-      "isbn": "978-2-3573-1296-8", 
-      "titre": "Tutelle, curatelle : Prot\u00e9ger un proche"
-    }, 
-    {
-      "auteur": "Dominique Lormier", 
-      "date_publication": "Sun, 27 Sep 2020 00:00:00 GMT", 
-      "editeur": "Editions du Rocher", 
-      "id": 20, 
-      "id_categorie": 9, 
-      "isbn": "978-2-2681-0416-4", 
-      "titre": "Les v\u00e9rit\u00e9s cach\u00e9es de la Seconde Guerre mondiale"
-    }, 
-    {
-      "auteur": "Jean-Fran\u00e7ois Solnon", 
-      "date_publication": "Sun, 30 Jan 2022 00:00:00 GMT", 
-      "editeur": "Perrin", 
-      "id": 21, 
-      "id_categorie": 9, 
-      "isbn": "978-2-2620-8455-4", 
-      "titre": "Anne d'Autriche"
-    }, 
-    {
-      "auteur": "Alain-Julien Rudefoucauld", 
-      "date_publication": "Sat, 11 Dec 2021 00:00:00 GMT", 
-      "editeur": "Esprit du Temps", 
-      "id": 22, 
-      "id_categorie": 9, 
-      "isbn": "978-2-8479-5542-2", 
-      "titre": "Les portes de l'enfer, la r\u00e9pression l\u00e9gale du citoyen sous Vichy"
-    }, 
-    {
-      "auteur": "Eric David", 
-      "date_publication": "Sun, 26 Dec 2021 00:00:00 GMT", 
-      "editeur": "Racine Be", 
-      "id": 23, 
-      "id_categorie": 9, 
-      "isbn": "978-2-3902-5138-5", 
-      "titre": "Le proc\u00e8s de Nuremberg"
-    }, 
-    {
-      "auteur": "Laurent Ruquier", 
-      "date_publication": "Fri, 07 May 2021 00:00:00 GMT", 
-      "editeur": "Flammarion", 
-      "id": 24, 
-      "id_categorie": 10, 
-      "isbn": "978-2-0802-5605-8", 
-      "titre": "Finement Con"
-    }, 
-    {
-      "auteur": "Robert C. Martin", 
-      "date_publication": "Fri, 20 Nov 2020 00:00:00 GMT", 
-      "editeur": "Pearson", 
-      "id": 25, 
-      "id_categorie": 11, 
-      "isbn": "978-2-3260-0267-8", 
-      "titre": "Architecture logicielle propre"
-    }, 
-    {
-      "auteur": "Lycia Diaz", 
-      "date_publication": "Wed, 18 Nov 2020 00:00:00 GMT", 
-      "editeur": "Eyrolles", 
-      "id": 26, 
-      "id_categorie": 11, 
-      "isbn": "978-2-4160-0067-6", 
-      "titre": "Je cr\u00e9e mon site avec WordPress. De l'h\u00e9bergement \u00e0 la promotion"
-    }, 
-    {
-      "auteur": "Daniel Ichbiah", 
-      "date_publication": "Mon, 17 Feb 2020 00:00:00 GMT", 
-      "editeur": "First Interactive", 
-      "id": 27, 
-      "id_categorie": 11, 
-      "isbn": "978-2-4120-5415-4", 
-      "titre": "Guide d'autod\u00e9fense sur Internet"
-    }, 
-    {
-      "auteur": "Bertrand Jouvenot", 
-      "date_publication": "Sat, 14 Sep 2019 00:00:00 GMT", 
-      "editeur": "Eyrolles", 
-      "id": 28, 
-      "id_categorie": 11, 
-      "isbn": "978-2-2126-7785-0", 
-      "titre": "Dopez votre strat\u00e9gie digitale: 72 fiches pratiques"
-    }, 
-    {
-      "auteur": " Marion Giroudon", 
-      "date_publication": "Sun, 27 Oct 2019 00:00:00 GMT", 
-      "editeur": "Gualino", 
-      "id": 29, 
-      "id_categorie": 11, 
-      "isbn": "978-2-2970-7357-8", 
-      "titre": "Cr\u00e9er une pr\u00e9sence efficace et rentable sur Internet"
-    }, 
-    {
-      "auteur": "Patrick Engebretson", 
-      "date_publication": "Thu, 22 Nov 2018 00:00:00 GMT", 
-      "editeur": "Pearson", 
-      "id": 30, 
-      "id_categorie": 11, 
-      "isbn": "978-2-7440-6723-5", 
-      "titre": "Hacker's box : Se prot\u00e9ger... et contre-attaquer !"
-    }, 
-    {
-      "auteur": "Michelle Jean-Baptiste", 
-      "date_publication": "Tue, 21 Aug 2018 00:00:00 GMT", 
-      "editeur": "Nathan", 
-      "id": 31, 
-      "id_categorie": 11, 
-      "isbn": "978-2-0916-5179-8", 
-      "titre": "Cr\u00e9er son e-commerce"
-    }, 
-    {
-      "auteur": "Henri Laude", 
-      "date_publication": "Wed, 20 Jun 2018 00:00:00 GMT", 
-      "editeur": "Editions ENI", 
-      "id": 32, 
-      "id_categorie": 11, 
-      "isbn": "978-2-4090-1397-3", 
-      "titre": "Data Scientist et langage R"
-    }, 
-    {
-      "auteur": "Herv\u00e9 Le Morvan", 
-      "date_publication": "Wed, 23 May 2018 00:00:00 GMT", 
-      "editeur": "Epsilon", 
-      "id": 33, 
-      "id_categorie": 11, 
-      "isbn": "978-2-4090-1384-3", 
-      "titre": "Java Spring - Le socle technique des applications Java EE"
-    }, 
-    {
-      "auteur": "Eric Lalitte", 
-      "date_publication": "Mon, 01 Jan 2018 00:00:00 GMT", 
-      "editeur": "Eyrolles", 
-      "id": 34, 
-      "id_categorie": 11, 
-      "isbn": "978-2-2126-7477-4", 
-      "titre": "Apprenez le fonctionnement des r\u00e9seaux TCP/IP"
-    }, 
-    {
-      "auteur": "Fanny Abadie", 
-      "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT", 
-      "editeur": "Syros Jeunesse", 
-      "id": 35, 
-      "id_categorie": 12, 
-      "isbn": "978-2-7485-3046-9", 
-      "titre": "Vous retiendrez mon nom"
-    }, 
-    {
-      "auteur": "Ariana Godoy", 
-      "date_publication": "Fri, 02 Sep 2022 00:00:00 GMT", 
-      "editeur": "Hachette Romans", 
-      "id": 36, 
-      "id_categorie": 13, 
-      "isbn": "978-2-0171-4772-5", 
-      "titre": "\u00c0 travers ma fen\u00eatre"
-    }, 
-    {
-      "auteur": "Rebecca Zanetti", 
-      "date_publication": "Thu, 01 Jul 2021 00:00:00 GMT", 
-      "editeur": "Milady", 
-      "id": 37, 
-      "id_categorie": 14, 
-      "isbn": "978-2-8112-2168-3", 
-      "titre": "Dark Protectors, T5 : Kane"
-    }, 
-    {
-      "auteur": "Lisa Gardner", 
-      "date_publication": "Fri, 12 Nov 2021 00:00:00 GMT", 
-      "editeur": "Le livre de Poche", 
-      "id": 38, 
-      "id_categorie": 15, 
-      "isbn": "978-2-2531-8164-4", 
-      "titre": "La Fille cach\u00e9e"
-    }, 
-    {
-      "auteur": "Mike Nicol", 
-      "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT", 
-      "editeur": "Gallimard", 
-      "id": 39, 
-      "id_categorie": 15, 
-      "isbn": "978-2-0729-0598-8", 
-      "titre": "Infiltr\u00e9e"
-    }, 
-    {
-      "auteur": "Lotte Hammer", 
-      "date_publication": "Wed, 09 Feb 2022 00:00:00 GMT", 
-      "editeur": "Actes Sud", 
-      "id": 40, 
-      "id_categorie": 15, 
-      "isbn": "978-2-3301-5992-4", 
-      "titre": "Le Polonais fou"
-    }, 
-    {
-      "auteur": "Fran\u00e7ois-Xavier Durrwell", 
-      "date_publication": "Mon, 08 Nov 2021 00:00:00 GMT", 
-      "editeur": "Cerf", 
-      "id": 41, 
-      "id_categorie": 16, 
-      "isbn": "978-2-2041-4056-0", 
-      "titre": "La Trinit\u00e9"
-    }, 
-    {
-      "auteur": "Anne Ancelin Sch\u00fctzenberger", 
-      "date_publication": "Sat, 02 Feb 2002 00:00:00 GMT", 
-      "editeur": "Editions Payot & Rivages", 
-      "id": 42, 
-      "id_categorie": 17, 
-      "isbn": "978-2-2289-3018-5", 
-      "titre": "Le psychodrame"
-    }, 
-    {
-      "auteur": "Kip Thorne", 
-      "date_publication": "Wed, 14 Sep 2022 00:00:00 GMT", 
-      "editeur": "Flammarion", 
-      "id": 43, 
-      "id_categorie": 18, 
-      "isbn": "978-2-0802-6877-8", 
-      "titre": "Trous noirs et distorsions du temps"
-    }, 
-    {
-      "auteur": "Thierry Courtin", 
-      "date_publication": "Tue, 10 Aug 2021 00:00:00 GMT", 
-      "editeur": "Nathan", 
-      "id": 44, 
-      "id_categorie": 19, 
-      "isbn": "978-2-0919-3555-3", 
-      "titre": "T'choupi Mon cahier ardoise - Ma moyenne section - d\u00e8s 4 ans"
-    }, 
-    {
-      "auteur": "David Bry", 
-      "date_publication": "Thu, 12 Jun 2014 00:00:00 GMT", 
-      "editeur": "Pocket", 
-      "id": 45, 
-      "id_categorie": 20, 
-      "isbn": "978-2-2663-2212-6", 
-      "titre": "La Princesse au visage de nuit"
-    }, 
-    {
-      "auteur": "Jacob Aagaard", 
-      "date_publication": "Sat, 10 Apr 2021 00:00:00 GMT", 
-      "editeur": "Olibris", 
-      "id": 46, 
-      "id_categorie": 21, 
-      "isbn": "979-1-0971-4032-8", 
-      "titre": "Attaque et d\u00e9fense aux \u00e9checs"
-    }, 
-    {
-      "auteur": "Moli\u00e8re", 
-      "date_publication": "Sat, 19 Nov 2022 00:00:00 GMT", 
-      "editeur": "Flammation", 
-      "id": 47, 
-      "id_categorie": 22, 
-      "isbn": "978-2-0802-6880-8", 
-      "titre": "Le misanthrope"
-    }, 
-    {
-      "auteur": "Tom Masters", 
-      "date_publication": "Tue, 18 Jan 2022 00:00:00 GMT", 
-      "editeur": "Lonely Planet", 
-      "id": 48, 
-      "id_categorie": 23, 
-      "isbn": "978-1-7886-8824-6", 
-      "titre": "Lonely Planet Georgia, Armenia & Azerbaijan"
-    }
-  ], 
-  "success": true, 
-  "total_books": 48
-}
+                     
+            "book": [
+            {
+            "auteur": "Michelle Marly",
+            "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT",
+            "editeur": "Fleuves éditions",
+            "id": 1,
+            "id_categorie": 1,
+            "isbn": "978-2-2651-5546-6",
+            "titre": "Romy et les lumières de Paris"
+            },
+            {
+            "auteur": "Jens Muller",
+            "date_publication": "Mon, 01 Oct 2018 00:00:00 GMT",
+            "editeur": "Taschen",
+            "id": 2,
+            "id_categorie": 1,
+            "isbn": "978-3-8365-7037-4",
+            "titre": "The history of graphic design : Volume 2, 1960-today"
+            },
+            {
+            "auteur": "Walter Isaacson",
+            "date_publication": "Tue, 19 Mar 2019 00:00:00 GMT",
+            "editeur": "Quanto",
+            "id": 3,
+            "id_categorie": 1,
+            "isbn": "978-2-8891-5263-6",
+            "titre": "Léonard de Vinci"
+            },
+            {
+            "auteur": "Mélanie Renaud",
+            "date_publication": "Tue, 10 Sep 2019 00:00:00 GMT",
+            "editeur": "First",
+            "id": 4,
+            "id_categorie": 1,
+            "isbn": "978-2-4120-5977-7",
+            "titre": "Le piano en 15 minutes par jour pour les Nuls mégapoche"
+            },
+            {
+            "auteur": "Christophe Blain, Jean-Marc Jancovici",
+            "date_publication": "Tue, 12 Oct 2021 00:00:00 GMT",
+            "editeur": "Dargaud",
+            "id": 5,
+            "id_categorie": 2,
+            "isbn": "978-2-2050-8816-8",
+            "titre": "Le monde sans fin"
+            },
+            {
+            "auteur": "Kohei Horikoshi",
+            "date_publication": "Wed, 27 Jan 2021 00:00:00 GMT",
+            "editeur": "Ki-oon",
+            "id": 6,
+            "id_categorie": 2,
+            "isbn": "979-1-0327-1081-4",
+            "titre": "My Hero Academia T31"
+            },
+            {
+            "auteur": "Xavier Dorison",
+            "date_publication": "Sat, 23 Oct 2021 00:00:00 GMT",
+            "editeur": "Kana",
+            "id": 7,
+            "id_categorie": 2,
+            "isbn": "978-2-5050-7846-3",
+            "titre": "BD Goldorak"
+            },
+            {
+            "auteur": "Masashi Kishimoto",
+            "date_publication": "Thu, 13 Mar 2003 00:00:00 GMT",
+            "editeur": "Kana",
+            "id": 8,
+            "id_categorie": 2,
+            "isbn": "978-2-8712-9511-2",
+            "titre": "Naruto, tome 6"
+            },
+            {
+            "auteur": "Philippe Etchebest",
+            "date_publication": "Tue, 12 Oct 2021 00:00:00 GMT",
+            "editeur": "Albin Michel",
+            "id": 9,
+            "id_categorie": 3,
+            "isbn": "978-2-2264-6454-5",
+            "titre": "Cuisinez bien accompagné avec ma méthode Mentor: Méthode & recettes"
+            },
+            {
+            "auteur": "Marie-Elodie Pape",
+            "date_publication": "Wed, 04 Mar 2020 00:00:00 GMT",
+            "editeur": "Dessain et Tolra",
+            "id": 10,
+            "id_categorie": 3,
+            "isbn": "978-2-0359-7025-1",
+            "titre": "Yaourts, desserts & cie à la yaourtière: Spécial multi délices"
+            },
+            {
+            "auteur": "Bérengère Philippon",
+            "date_publication": "Tue, 02 Feb 2021 00:00:00 GMT",
+            "editeur": "Larousse",
+            "id": 11,
+            "id_categorie": 3,
+            "isbn": "978-2-0359-9718-0",
+            "titre": "Je réussis ma détox sucre: Comprenez et cuisinez IG bas au quotidien"
+            },
+            {
+            "auteur": "Thibault Geoffray",
+            "date_publication": "Wed, 12 Sep 2018 00:00:00 GMT",
+            "editeur": "Marabout",
+            "id": 12,
+            "id_categorie": 3,
+            "isbn": "978-2-5011-3634-1",
+            "titre": "Mes recettes healthy: BIM ! Prends toi en main avec mes recettes fitfightforever"
+            },
+            {
+            "auteur": "Clémence Maumené",
+            "date_publication": "Sun, 12 Sep 2021 00:00:00 GMT",
+            "editeur": "Albin Michel",
+            "id": 13,
+            "id_categorie": 3,
+            "isbn": "978-2-2264-5998-5",
+            "titre": "Cuisinez pour bébé"
+            },
+            {
+            "auteur": "Maud Ankaoua",
+            "date_publication": "Mon, 14 Oct 2019 00:00:00 GMT",
+            "editeur": "J'ai lu",
+            "id": 14,
+            "id_categorie": 4,
+            "isbn": "ISBN : 978-2-2902-1051-2",
+            "titre": "Kilomètre zéro : Le chemin du bonheur"
+            },
+            {
+            "auteur": "Charles Brasart",
+            "date_publication": "Fri, 12 Mar 2021 00:00:00 GMT",
+            "editeur": " Armand Colin",
+            "id": 15,
+            "id_categorie": 5,
+            "isbn": "978-2-2006-2660-0",
+            "titre": "L'essentiel de la grammaire anglaise"
+            },
+            {
+            "auteur": "Yann-Gaël Menais",
+            "date_publication": "Tue, 12 Oct 2021 00:00:00 GMT",
+            "editeur": "Gereso",
+            "id": 16,
+            "id_categorie": 6,
+            "isbn": "979-1-0397-0005-4",
+            "titre": "Perfectionner ses méthodes de vente"
+            },
+            {
+            "auteur": "Frédéric Laloux",
+            "date_publication": "Wed, 07 Oct 2015 00:00:00 GMT",
+            "editeur": "Diateino",
+            "id": 17,
+            "id_categorie": 6,
+            "isbn": "978-2-3545-6105-5",
+            "titre": "Reinventing Organizations: Vers des communautés de travail inspirées"
+            },
+            {
+            "auteur": "Christophe Bourseiller",
+            "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT",
+            "editeur": "Cerf",
+            "id": 18,
+            "id_categorie": 7,
+            "isbn": "978-2-2041-4513-8",
+            "titre": "Le complotisme, anatomie d'une religion"
+            },
+            {
+            "auteur": "Edith Tavignot",
+            "date_publication": "Tue, 29 Dec 2020 00:00:00 GMT",
+            "editeur": "Particulier",
+            "id": 19,
+            "id_categorie": 8,
+            "isbn": "978-2-3573-1296-8",
+            "titre": "Tutelle, curatelle : Protéger un proche"
+            },
+            {
+            "auteur": "Dominique Lormier",
+            "date_publication": "Sun, 27 Sep 2020 00:00:00 GMT",
+            "editeur": "Editions du Rocher",
+            "id": 20,
+            "id_categorie": 9,
+            "isbn": "978-2-2681-0416-4",
+            "titre": "Les vérités cachées de la Seconde Guerre mondiale"
+            },
+            {
+            "auteur": "Jean-François Solnon",
+            "date_publication": "Sun, 30 Jan 2022 00:00:00 GMT",
+            "editeur": "Perrin",
+            "id": 21,
+            "id_categorie": 9,
+            "isbn": "978-2-2620-8455-4",
+            "titre": "Anne d'Autriche"
+            },
+            {
+            "auteur": "Alain-Julien Rudefoucauld",
+            "date_publication": "Sat, 11 Dec 2021 00:00:00 GMT",
+            "editeur": "Esprit du Temps",
+            "id": 22,
+            "id_categorie": 9,
+            "isbn": "978-2-8479-5542-2",
+            "titre": "Les portes de l'enfer, la répression légale du citoyen sous Vichy"
+            },
+            {
+            "auteur": "Eric David",
+            "date_publication": "Sun, 26 Dec 2021 00:00:00 GMT",
+            "editeur": "Racine Be",
+            "id": 23,
+            "id_categorie": 9,
+            "isbn": "978-2-3902-5138-5",
+            "titre": "Le procès de Nuremberg"
+            },
+            {
+            "auteur": "Laurent Ruquier",
+            "date_publication": "Fri, 07 May 2021 00:00:00 GMT",
+            "editeur": "Flammarion",
+            "id": 24,
+            "id_categorie": 10,
+            "isbn": "978-2-0802-5605-8",
+            "titre": "Finement Con"
+            },
+            {
+            "auteur": "Robert C. Martin",
+            "date_publication": "Fri, 20 Nov 2020 00:00:00 GMT",
+            "editeur": "Pearson",
+            "id": 25,
+            "id_categorie": 11,
+            "isbn": "978-2-3260-0267-8",
+            "titre": "Architecture logicielle propre"
+            },
+            {
+            "auteur": "Lycia Diaz",
+            "date_publication": "Wed, 18 Nov 2020 00:00:00 GMT",
+            "editeur": "Eyrolles",
+            "id": 26,
+            "id_categorie": 11,
+            "isbn": "978-2-4160-0067-6",
+            "titre": "Je crée mon site avec WordPress. De l'hébergement à la promotion"
+            },
+            {
+            "auteur": "Daniel Ichbiah",
+            "date_publication": "Mon, 17 Feb 2020 00:00:00 GMT",
+            "editeur": "First Interactive",
+            "id": 27,
+            "id_categorie": 11,
+            "isbn": "978-2-4120-5415-4",
+            "titre": "Guide d'autodéfense sur Internet"
+            },
+            {
+            "auteur": "Bertrand Jouvenot",
+            "date_publication": "Sat, 14 Sep 2019 00:00:00 GMT",
+            "editeur": "Eyrolles",
+            "id": 28,
+            "id_categorie": 11,
+            "isbn": "978-2-2126-7785-0",
+            "titre": "Dopez votre stratégie digitale: 72 fiches pratiques"
+            },
+            {
+            "auteur": " Marion Giroudon",
+            "date_publication": "Sun, 27 Oct 2019 00:00:00 GMT",
+            "editeur": "Gualino",
+            "id": 29,
+            "id_categorie": 11,
+            "isbn": "978-2-2970-7357-8",
+            "titre": "Créer une présence efficace et rentable sur Internet"
+            },
+            {
+            "auteur": "Patrick Engebretson",
+            "date_publication": "Thu, 22 Nov 2018 00:00:00 GMT",
+            "editeur": "Pearson",
+            "id": 30,
+            "id_categorie": 11,
+            "isbn": "978-2-7440-6723-5",
+            "titre": "Hacker's box : Se protéger... et contre-attaquer !"
+            },
+            {
+            "auteur": "Michelle Jean-Baptiste",
+            "date_publication": "Tue, 21 Aug 2018 00:00:00 GMT",
+            "editeur": "Nathan",
+            "id": 31,
+            "id_categorie": 11,
+            "isbn": "978-2-0916-5179-8",
+            "titre": "Créer son e-commerce"
+            },
+            {
+            "auteur": "Henri Laude",
+            "date_publication": "Wed, 20 Jun 2018 00:00:00 GMT",
+            "editeur": "Editions ENI",
+            "id": 32,
+            "id_categorie": 11,
+            "isbn": "978-2-4090-1397-3",
+            "titre": "Data Scientist et langage R"
+            },
+            {
+            "auteur": "Hervé Le Morvan",
+            "date_publication": "Wed, 23 May 2018 00:00:00 GMT",
+            "editeur": "Epsilon",
+            "id": 33,
+            "id_categorie": 11,
+            "isbn": "978-2-4090-1384-3",
+            "titre": "Java Spring - Le socle technique des applications Java EE"
+            },
+            {
+            "auteur": "Eric Lalitte",
+            "date_publication": "Mon, 01 Jan 2018 00:00:00 GMT",
+            "editeur": "Eyrolles",
+            "id": 34,
+            "id_categorie": 11,
+            "isbn": "978-2-2126-7477-4",
+            "titre": "Apprenez le fonctionnement des réseaux TCP/IP"
+            },
+            {
+            "auteur": "Fanny Abadie",
+            "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT",
+            "editeur": "Syros Jeunesse",
+            "id": 35,
+            "id_categorie": 12,
+            "isbn": "978-2-7485-3046-9",
+            "titre": "Vous retiendrez mon nom"
+            },
+            {
+            "auteur": "Ariana Godoy",
+            "date_publication": "Fri, 02 Sep 2022 00:00:00 GMT",
+            "editeur": "Hachette Romans",
+            "id": 36,
+            "id_categorie": 13,
+            "isbn": "978-2-0171-4772-5",
+            "titre": "À travers ma fenêtre"
+            },
+            {
+            "auteur": "Rebecca Zanetti",
+            "date_publication": "Thu, 01 Jul 2021 00:00:00 GMT",
+            "editeur": "Milady",
+            "id": 37,
+            "id_categorie": 14,
+            "isbn": "978-2-8112-2168-3",
+            "titre": "Dark Protectors, T5 : Kane"
+            },
+            {
+            "auteur": "Lisa Gardner",
+            "date_publication": "Fri, 12 Nov 2021 00:00:00 GMT",
+            "editeur": "Le livre de Poche",
+            "id": 38,
+            "id_categorie": 15,
+            "isbn": "978-2-2531-8164-4",
+            "titre": "La Fille cachée"
+            },
+            {
+            "auteur": "Mike Nicol",
+            "date_publication": "Thu, 10 Feb 2022 00:00:00 GMT",
+            "editeur": "Gallimard",
+            "id": 39,
+            "id_categorie": 15,
+            "isbn": "978-2-0729-0598-8",
+            "titre": "Infiltrée"
+            },
+            {
+            "auteur": "Lotte Hammer",
+            "date_publication": "Wed, 09 Feb 2022 00:00:00 GMT",
+            "editeur": "Actes Sud",
+            "id": 40,
+            "id_categorie": 15,
+            "isbn": "978-2-3301-5992-4",
+            "titre": "Le Polonais fou"
+            },
+            {
+            "auteur": "François-Xavier Durrwell",
+            "date_publication": "Mon, 08 Nov 2021 00:00:00 GMT",
+            "editeur": "Cerf",
+            "id": 41,
+            "id_categorie": 16,
+            "isbn": "978-2-2041-4056-0",
+            "titre": "La Trinité"
+            },
+            {
+            "auteur": "Anne Ancelin Schützenberger",
+            "date_publication": "Sat, 02 Feb 2002 00:00:00 GMT",
+            "editeur": "Editions Payot & Rivages",
+            "id": 42,
+            "id_categorie": 17,
+            "isbn": "978-2-2289-3018-5",
+            "titre": "Le psychodrame"
+            },
+            {
+            "auteur": "Kip Thorne",
+            "date_publication": "Wed, 14 Sep 2022 00:00:00 GMT",
+            "editeur": "Flammarion",
+            "id": 43,
+            "id_categorie": 18,
+            "isbn": "978-2-0802-6877-8",
+            "titre": "Trous noirs et distorsions du temps"
+            },
+            {
+            "auteur": "Thierry Courtin",
+            "date_publication": "Tue, 10 Aug 2021 00:00:00 GMT",
+            "editeur": "Nathan",
+            "id": 44,
+            "id_categorie": 19,
+            "isbn": "978-2-0919-3555-3",
+            "titre": "T'choupi Mon cahier ardoise - Ma moyenne section - dès 4 ans"
+            },
+            {
+            "auteur": "David Bry",
+            "date_publication": "Thu, 12 Jun 2014 00:00:00 GMT",
+            "editeur": "Pocket",
+            "id": 45,
+            "id_categorie": 20,
+            "isbn": "978-2-2663-2212-6",
+            "titre": "La Princesse au visage de nuit"
+            },
+            {
+            "auteur": "Jacob Aagaard",
+            "date_publication": "Sat, 10 Apr 2021 00:00:00 GMT",
+            "editeur": "Olibris",
+            "id": 46,
+            "id_categorie": 21,
+            "isbn": "979-1-0971-4032-8",
+            "titre": "Attaque et défense aux échecs"
+            },
+            {
+            "auteur": "Molière",
+            "date_publication": "Sat, 19 Nov 2022 00:00:00 GMT",
+            "editeur": "Flammation",
+            "id": 47,
+            "id_categorie": 22,
+            "isbn": "978-2-0802-6880-8",
+            "titre": "Le misanthrope"
+            },
+            {
+            "auteur": "Tom Masters",
+            "date_publication": "Tue, 18 Jan 2022 00:00:00 GMT",
+            "editeur": "Lonely Planet",
+            "id": 48,
+            "id_categorie": 23,
+            "isbn": "978-1-7886-8824-6",
+            "titre": "Lonely Planet Georgia, Armenia & Azerbaijan"
+            }
+            ],
+            "success": true,
+            "total_books": 48
+  }
+  
+      
   
  
 
