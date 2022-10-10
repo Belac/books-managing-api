@@ -512,121 +512,25 @@ The API will return different error types when requests fail:
   
  
 
-. ## DELETE/categorie)
+. ## DELETE/livres        
 
     GENERAL:
-        Delete the categorie of the given ID if it exists. Return the id of the deleted categorie, success value, total of (books) a
-
-        Results are paginated in groups of 25. include a request argument to choose page number, starting from 1.
-
-    SAMPLE: curl -X DELETE http://localhost:5000/categories/25
-
+        Delete the Livre of the given ID if it exists. Return the Livre object deleted, success value and the total of Livre that remains.
+    SAMPLE: curl -X DELETE http://localhost:5000/livres/13
         {
-        'success': True,
-        'delete successfully': 25,
-         }
-        {
-    "Categorie": [
-        {
-            "id": 1,
-            "libelle_categorie": "Art et cinema"
-        },
-        {
-            "id": 2,
-            "libelle_categorie": "Developpement personnel"
-        },
-        {
-            "id": 3,
-            "libelle_categorie": "Essais et document"
-        },
-        {
-            "id": 4,
-            "libelle_categorie": "Humour"
-        },
-        {
-            "id": 6,
-            "libelle_categorie": "Religion et spiritualité"
-        },
-        {
-            "id": 7,
-            "libelle_categorie": "Scolaire"
-        },
-        {
-            "id": 8,
-            "libelle_categorie": "Théatre"
-        },
-        {
-            "id": 9,
-            "libelle_categorie": "Bandes dessinées"
-        },
-        {
-            "id": 10,
-            "libelle_categorie": "Dictionnaire & Langues"
-        },
-        {
-            "id": 11,
-            "libelle_categorie": "Guide Pratiques"
-        },
-        {
-            "id": 12,
-            "libelle_categorie": "Informatique et Internet"
-        },
-        {
-            "id": 13,
-            "libelle_categorie": "Literrature sentimentale"
-        },
-        {
-            "id": 14,
-            "libelle_categorie": "Science sociales"
-        },
-        {
-            "id": 15,
-            "libelle_categorie": "SF,Fantasy"
-        },
-        {
-            "id": 16,
-            "libelle_categorie": "Tourisme et Voyages"
-        },
-        {
-            "id": 17,
-            "libelle_categorie": "Cuisine"
-        },
-        {
-            "id": 18,
-            "libelle_categorie": "Droit & Economie"
-        },
-        {
-            "id": 19,
-            "libelle_categorie": "Histoire"
-        },
-        {
-            "id": 20,
-            "libelle_categorie": "Jeunesse"
-        },
-        {
-            "id": 21,
-            "libelle_categorie": "Policier,suspense,thrillers"
-        },
-        {
-            "id": 22,
-            "libelle_categorie": "Sciences,techniques & médecine"
-        },
-        {
-            "id": 23,
-            "libelle_categorie": "Sport loisirs et vie pratique"
-        },
-        {
-            "id": 5,
-            "libelle_categorie": "Littérature"
-        },
-        {
-            "id": 24,
-            "libelle_categorie": "Ma beauté legendaire"
+            "book": {
+                "auteur": "Clémence Maumené",
+                "date_publication": "Sun, 12 Sep 2021 00:00:00 GMT",
+                "editeur": "Albin Michel",
+                "id": 13,
+                "id_categorie": 3,
+                "isbn": "978-2-2264-5998-5",
+                "titre": "Cuisinez pour bébé"
+            },
+            "deleted_id": 13,
+            "success": true,
+            "total_books": 47
         }
-    ],
-    "success": true,
-    "total_categories": 24
-}
 
 . ##PATCH/livres/id
   GENERAL:
